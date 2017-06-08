@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+</head>
+
+<body>
+    <div id="premium-member-paypal-button"></div>
+    <div id="event-member-paypal-button"></div>
+
+    <script>
+        paypal.Button.render({
+
+            env: 'sandbox', // Or 'production',
+
+            commit: true, // Show a 'Pay Now' button
+
+            payment: function() {
+                // Set up the payment here
+            },
+
+            onAuthorize: function(data, actions) {
+                // Execute the payment here
+           }
+
+        }, '#premium-member-paypal-button');
+        
+        paypal.Button.render({
+
+            env: 'sandbox', // Or 'production',
+
+            commit: true, // Show a 'Pay Now' button
+
+            payment: function() {
+                // Set up the payment here
+            },
+
+            onAuthorize: function(data, actions) {
+                // Execute the payment here
+           }
+
+        }, '#event-member-paypal-button');
+    </script>
+</body>
+</html>
