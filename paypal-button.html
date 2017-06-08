@@ -11,35 +11,31 @@
 
     <script>
         paypal.Button.render({
-
             env: 'sandbox', // Or 'production',
-
             commit: true, // Show a 'Pay Now' button
-
             payment: function() {
                 // Set up the payment here
             },
-
             onAuthorize: function(data, actions) {
                 // Execute the payment here
-           }
-
+            },
+            style: {
+                label: 'Premium Member subscription'
+            }
         }, '#premium-member-paypal-button');
         
         paypal.Button.render({
-
             env: 'sandbox', // Or 'production',
-
             commit: true, // Show a 'Pay Now' button
-
             payment: function() {
                 // Set up the payment here
             },
-
             onAuthorize: function(data, actions) {
                 // Execute the payment here
-           }
-
+            },
+            style: {
+                label: 'Event Member subscription'
+            }
         }, '#event-member-paypal-button');
     </script>
 </body>
